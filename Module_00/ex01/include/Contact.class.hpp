@@ -6,7 +6,7 @@
 /*   By: wilhelmfermey <marvin@42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:45:30 by wilhelmfermey     #+#    #+#             */
-/*   Updated: 2022/07/15 11:19:32 by wilhelmfermey    ###   ########.fr       */
+/*   Updated: 2022/07/18 12:10:28 by wilhelmfermey    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Contact
 	Contact(void);
 	~Contact(void);
 	int	ft_enter_info(void);
+
 
 	std::string f_name;
 	std::string l_name;
