@@ -1,0 +1,110 @@
+#include "Animal.hpp"
+
+
+/*************************  animal  ***************************/
+Animal::Animal(void)
+{
+	std::cout << "Default Constructor has been call" <<std::endl;
+	return ;
+}
+
+Animal::Animal(const Animal& src)
+{
+	std::cout << "Copy constructor has been call" <<std::endl;
+	*this = src;
+}
+
+Animal&	Animal::operator=(const Animal& rhs)
+{
+	std::cout << "Assignement operator  has been call" <<std::endl;
+	this->_type = rhs._type;
+
+	return (*this);
+}
+
+std::string    Animal::getType(void) const
+{
+	return (this->_type);
+}
+
+void	Animal::makeSound(void) const
+{
+	std::cout << "No sound" << std::endl;
+}
+
+Animal::~Animal(void)
+{
+	std::cout << "Destructor has been call" <<std::endl;
+	return ;
+}
+
+/*************************  Dog  ***************************/
+
+Dog::Dog(void)
+{
+	std::cout << "Default Dog Constructor has been call" <<std::endl;
+	this->brain = new Brain();
+	this->Animal::_type = "Dog";
+	return ;
+}
+
+Dog::Dog(const Dog& src)
+{
+	std::cout << "Copy Dog constructor has been call" <<std::endl;
+	*this = src;
+}
+
+Dog&	Dog::operator=(const Dog& rhs)
+{
+	std::cout << "Assignement Dog operator  has been call" <<std::endl;
+	this->_type = rhs._type;
+
+	return (*this);
+}
+
+void	Dog::makeSound(void) const
+{
+	std::cout << "Wouuf Wouff !!" << std::endl;
+}
+
+Dog::~Dog(void)
+{
+	std::cout << "Destructor Dog has been call" <<std::endl;
+	return ;
+}
+
+/*************************  Cat  ***************************/
+
+Cat::Cat(void)
+{
+	std::cout << "Default Cat Constructor has been call" <<std::endl;
+	this->brain = new Brain();
+	this->Animal::_type = "Cat";
+	return ;
+}
+
+Cat::Cat(const Cat& src)
+{
+	std::cout << "Copy Cat constructor has been call" <<std::endl;
+	*this = src;
+}
+
+Cat&	Cat::operator=(const Cat& rhs)
+{
+	std::cout << "Assignement Cat operator  has been call" <<std::endl;
+	this->_type = rhs._type;
+
+	return (*this);
+}
+
+void	Cat::makeSound(void) const
+{
+	std::cout << "Miaou Miaouuu !!" << std::endl;
+}
+
+Cat::~Cat(void)
+{
+	std::cout << "Destructor Cat has been call" <<std::endl;
+	return ;
+}
+

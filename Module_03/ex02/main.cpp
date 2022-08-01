@@ -4,9 +4,9 @@
 
 int	main(void)
 {
-	FragTrap	FragTrap("Hello");
+	FragTrap	a("Hello");
+	FragTrap	b(a);
 
-	FragTrap.highFivesGuys();
 
 	return 0;
 }

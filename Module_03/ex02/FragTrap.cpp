@@ -13,18 +13,18 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::FragTrap(const FragTrap& src)
 {
-	*this = src;
 	std::cout << "Copy FragTrap has been call" <<std::endl;
+	*this = src;
 }
 
 FragTrap&	FragTrap::operator=(const FragTrap& rhs)
 {
+	std::cout << "Assignement FragTrap has been call" <<std::endl;
 	this->_name = rhs._name;
 	this->_Hit = rhs._Hit;
 	this->_Energy = rhs._Energy;
 	this->_Attack = rhs._Attack;
 
-	std::cout << "Assignement FragTrap has been call" <<std::endl;
 	return (*this);
 }
 
