@@ -66,10 +66,20 @@ void	Bureaucrat::decre(void)
 
 void	Bureaucrat::signForm(Form& src)
 {
-	if (src.getBool() == 0)
+	if (src.getBool() == 1)
+		std::cout << "Already signed " << std::endl;
+	else if (this->_grade > src.getGrade_si())
+		std::cout << this->_name << " couldn’t sign " << src.getName() << " because too low" << std::endl;
+	else
+	{
 		std::cout << this->_name << " signed " << src.getName() << std::endl;
-	else	
-		std::cout << this->_name << " couldn't signed " << src.getName() << " because the form is signed already." << std::endl;
+		src.beSigned(*this);
+	}
+}
+
+void	Bureaucrat::executeForm(const Form& F1)
+{
+	F1.execute(*this);	
 }
 
 /*************************** Exception ****************************/

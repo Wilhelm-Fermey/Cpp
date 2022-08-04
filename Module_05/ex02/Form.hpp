@@ -36,6 +36,7 @@ class	Form
 		const int	getGrade_ex(void) const;
 
 		void	beSigned(Bureaucrat &src);
+		virtual void	execute(const Bureaucrat& executor) const = 0;
 
 	private:
 		const std::string _name;

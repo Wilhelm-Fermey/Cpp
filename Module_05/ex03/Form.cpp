@@ -2,7 +2,7 @@
 
 /**************************  Constructor  *****************************/
 
-Form::Form(void) : _name(""), _signed(0), _grade_si(50), _grade_ex(50)
+Form::Form(void) : _name(""), _signed(0), _grade_si(150), _grade_ex(150)
 {
 	return ;
 }
@@ -81,5 +81,10 @@ void	Form::beSigned(Bureaucrat &src)
 		this->_signed = 1;
 	else
 		throw Form::GradeTooLowException();
+}
+
+void    Form::execute(const Bureaucrat& executor) const
+{
+	return ;
 }
 
