@@ -1,6 +1,6 @@
 NAME=	a.out
 
-FLAGS=	-Wall -Wextra -Werror
+FLAGS=	-Wall -Wextra -Werror -std=c++98
 
 FILES=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
